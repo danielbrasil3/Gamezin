@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --color-textside: #5D7285;
+    --color-background: #EFEFEF;
+    --color-white: #ffffff;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary: #F29A2E;
+    --color-verde: #4CE13F;
+    --color-azul: #475BE8;
+
+    --card-padding: 1.8rem;
+    --card-border-radius: 0.3rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    --padding-1: 1.2rem;
+
+
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-textside);
+    background-color: var(--color-background);
+}
+
+
+
+
+.container{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
+
+aside{
+    height: 100vh;
+    width: 100vw;
+}
+
+aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1.4rem;
+}
+
+aside .nav{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+aside .nav .brand .logo{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0.2rem;
+    left: 1rem;
+}
+
+
+aside .nav .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 15px;
+    height: 80vh;
+    position: relative;
+    left: 1rem;
+    bottom: 0.8rem;
+}
+
+aside .nav .sidebar a{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    border-radius: 5px;
+    padding: 0rem 0.5rem;
+    top: 0rem;
+}
+
+
+aside .nav .sidebar svg{
+    width: 1.6rem;
+    height: 1.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+aside .nav .sidebar h3{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--color-textside);
+    text-align: left;
+}
+
+
+aside .nav .sidebar a{
+    transition: all 0.2s ease;
+}
+
+aside .nav .sidebar a:hover,
+aside .nav .sidebar h3:hover,
+aside .nav .sidebar svg path:hover {
+    background: #e9f5fe;
+    color: #0c7fda;
+    fill: #0c7fda;
+}
+
+aside .nav .ver p{
+    padding: 5rem 5rem;
+    top: 4rem;
+    position: relative;
+    }
+
+
+main{
+    margin-top: 1.4rem;
+    position: relative;
+    left: 5rem;
+}
+    
+main .dashboard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.6rem;
+
+}
+    
+main .dashboard > div{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 0rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+    
+main .dashboard > div:hover{
+    box-shadow: none;
+}
+    
+main .dashboard > div .status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    right: 1rem;
+}
+    
+main .dashboard h3{
+    margin-left: 0rem;
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 2.2rem;
+}
+
+main .dashboard h5{
+    white-space: pre;
+    font-size: 0.6rem;
+    position: relative;
+    top: 1.7rem;
+    
+}
+    
+main .dashboard .progresss{
+    position: relative;
+    width: 140px;
+    height: 100px;
+    border-radius: 100%;
+}
+    
+main .dashboard svg{
+    width: 10rem;
+    height: 7rem;
+}
+    
+main .dashboard svg circle{
+    fill: none;
+    stroke-width: 9;
+    stroke-linecap: round;
+    transform: translate(40px, 0px);
+    stroke-dashoffset: 0;
+    stroke-dasharray: 226;
+}
+
+
+main .dashboard .vendas svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #e2e8ee;
+}
+main .dashboard .vendas svg circle:nth-child(2){
+    stroke: var(--color-azul);
+    transition: stroke-dashoffset 0.08s;
+}
+main .dashboard .visits svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #e2e8ee;
+}
+main .dashboard .visits svg circle:nth-child(2){
+    stroke: var(--color-verde);
+    transition: stroke-dashoffset 0.08s;
+}
+main .dashboard .searches svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #e2e8ee;
+}
+main .dashboard .searches svg circle:nth-child(2){
+    stroke: var(--color-primary);
+    transition: stroke-dashoffset 0.08s;
+}
+    
+main .dashboard .progresss .percentage,
+main .dashboard .progresss .percentage1,
+main .dashboard .progresss .percentage2{
+    position: absolute;
+    top: 1px;
+    left: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
