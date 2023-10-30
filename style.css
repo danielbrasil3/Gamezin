@@ -154,13 +154,13 @@ main{
     margin-top: 1.4rem;
     position: relative;
     left: 5rem;
+    
 }
     
 main .dashboard{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.6rem;
-
 }
     
 main .dashboard > div{
@@ -260,7 +260,12 @@ main .dashboard .progresss .percentage2{
     height: 100%;
     width: 100%;
 }
+main .test{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.6rem;
 
+}
 main .receita-total{
     margin-top: 1.3rem;
 }
@@ -274,8 +279,8 @@ main .receita-total > div{
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    width: 600px;
-    height: 300px;
+    width: 45.5vw;
+    height: 56.7vh;
 
 }
     
@@ -342,39 +347,40 @@ main .receita-total .status .venda-gasto svg{
 
 
 
+
+
+
 .relatorios{
-    margin-top: 1.3rem;
-    position: relative;
-    left: 58.5rem;
-    bottom: 26.8rem;
-}
-
-
-
-.relatorios table{
     background-color: var(--color-white);
-    width: 340px;
-    height: 300px;
-    padding: 30px 10px;
+    margin: 1.3rem 0rem;
+    width: 100%;
+    height: 56.7vh;
     text-align: center;
     box-shadow: var(--box-shadow);
     border-radius: var(--card-border-radius);
     transition: all 0.3s ease;
-    white-space: pre;
 }
 
-.relatorios .titulo h3{
-    font-size: 1rem;
-    position: relative;
-    top: 1.6rem;
-    left: 1rem;
-}
-.relatorios table:hover{
+.relatorios:hover{
     box-shadow: none;
 }
 
+.relatorios h3{
+    font-size: 1rem;
+    padding: .2rem;
+}
+
+.relatorios table{
+    margin-left: .5rem; 
+    border-spacing: 1.19rem 1px;
+    white-space: pre;
+}
+
+
+
 .relatorios table tbody td{
-    height: 2.8rem;
+    height: 7.25vh;
+    width: 100vw;
     border-bottom: 1px solid var(--color-light);
     color: var(--color-dark-variant);
 }
@@ -385,11 +391,71 @@ main .receita-total .status .venda-gasto svg{
 
 .relatorios a{
     text-align: center;
-    display: block;
-    margin: 1rem auto;
     color: var(--color-primary);
 }
 
 
 
+/* ---------- MEDIA QUERIES ---------- */
+
+
+
     
+/* Estilos para telas menores que 768px (por exemplo, smartphones em modo retrato) */
+@media screen and (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr; /* Altera para uma coluna única */
+        gap: 1rem; /* Reduz o espaçamento entre os elementos */
+    }
+
+    aside{
+        display: none; /* Esconde a barra lateral */
+    }
+
+    main {
+        margin-left: 1rem; /* Adiciona margem à esquerda para o conteúdo principal */
+    }
+
+    .receita-total > div,
+    .relatorios {
+        width: 100%; /* Faz com que os elementos ocupem 100% da largura */
+        margin-left: 0; /* Remove a margem à esquerda */
+    }
+
+    .receita-total .status .venda-gasto,
+    .receita-total .status .venda-gasto svg {
+        font-size: 0.6rem; /* Reduz o tamanho do texto e do ícone */
+    }
+}
+
+/* Estilos para telas entre 768px e 1023px (por exemplo, tablets em modo retrato) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        grid-template-columns: 1fr; /* Altera para uma coluna única */
+        gap: 1rem; /* Reduz o espaçamento entre os elementos */
+    }
+
+    aside{
+        display: none; /* Esconde a barra lateral */
+    }
+
+    main {
+        margin-left: 1rem; /* Adiciona margem à esquerda para o conteúdo principal */
+    }
+}
+
+/* Estilos para telas maiores que 1023px (por exemplo, tablets em modo paisagem e desktops) */
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: 8.8rem auto 23rem; /* Restaura o layout de três colunas */
+        gap: 0rem; /* Restaura o espaçamento entre os elementos */
+    }
+
+    aside {
+        display: flex; /* Mostra a barra lateral novamente */
+    }
+
+    main {
+        margin-left: 5rem; /* Restaura a margem à esquerda para o conteúdo principal */
+    }
+}
