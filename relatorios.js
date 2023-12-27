@@ -1,4 +1,4 @@
-const Orders = [
+const Relatorios = [
     {
         periodo: '17:00 as 18:00',
         margemdelucro: '30%',

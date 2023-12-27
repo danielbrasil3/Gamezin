@@ -1,0 +1,192 @@
+.estoque{
+    background-color: var(--color-white);
+    margin: 1.3rem 0rem;
+    width: 75vw;
+    height: 88.7vh;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+
+.estoque:hover{
+    box-shadow: none;
+}
+
+.estoque h3{
+    font-size: 1rem;
+    padding: .2rem;
+}
+
+.estoque table{
+    margin-left: .6rem; 
+    border-collapse: collapse;
+    width: 98%;
+
+}
+
+
+.estoque table tbody td, th{
+    height: 7.25vh;
+    width: 100vw;
+    border-left: 2px solid var(--color-light);
+    color: var(--color-dark-variant);
+    white-space: pre;
+}
+
+.estoque table tbody td button{
+    height: 16px;
+    width: 16px;
+    padding: .2rem;
+    background: none;
+    cursor: pointer;
+}
+
+.estoque tr:nth-child(even) {background-color: #f2f2f2;} 
+
+
+.margemset{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0000004b;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal{
+    width: 10%;
+    min-width: 300px;
+    min-height: 100px;
+    font-size: 8px;
+    background-color: #ffffff62;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.modal h1{
+    margin-bottom: 20px;
+    
+}
+
+#setarmargem{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: .5rem;
+    width: 100px;
+    font-size: 20px;
+}
+@keyframes animate-modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.margemset.mostrar{
+    display: flex;
+}
+
+.mostrar .modal{
+    animation: animate-modal .3s;
+}
+
+
+
+.compra{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0000004b;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal2{
+    width: 10%;
+    min-width: 300px;
+    min-height: 100px;
+    font-size: 8px;
+    background-color: #ffffff62;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.modal2 h1{
+    margin-bottom: 20px;
+    
+}
+
+#quantiacomprar{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: .5rem;
+    width: 100px;
+    font-size: 20px;
+}
+@keyframes animate-modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.compra.mostrar{
+    display: flex;
+}
+
+.mostrar .modal2{
+    animation: animate-modal .3s;
+}

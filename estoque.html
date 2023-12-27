@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Gamezin</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
                     </div>
                 </div>
                 <div class="sidebar">
-                    <a href="#">
+                    <a href="index.html">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="#5D7285" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.1797 27.6978V23.6208C12.1797 22.5801 13.0296 21.7364 14.0779 21.7364H17.9102C18.4136 21.7364 18.8964 21.9349 19.2524 22.2883C19.6084 22.6417 19.8084 23.121 19.8084 23.6208V27.6978C19.8052 28.1305 19.9761 28.5465 20.2832 28.8536C20.5902 29.1606 21.0081 29.3333 21.4439 29.3333H24.0584C25.2795 29.3365 26.4517 28.8571 27.3162 28.0011C28.1808 27.145 28.6667 25.9826 28.6667 24.7704V13.1558C28.6667 12.1766 28.2294 11.2478 27.4728 10.6195L18.5787 3.56782C17.0316 2.33141 14.8148 2.37133 13.3139 3.66263L4.62269 10.6195C3.83033 11.2293 3.35675 12.1608 3.33334 13.1558V24.7586C3.33334 27.2851 5.39652 29.3333 7.94157 29.3333H10.4964C11.4016 29.3333 12.1373 28.6083 12.1439 27.7096L12.1797 27.6978Z" fill="#5D7285"/>
                         </svg>
@@ -55,125 +56,43 @@
 
         <!-- Conteudo principal -->
         <main>
-            <h1>Dashboard</h1>
-            <!--  <input id="numberProgress" type="number" placeholder="digite um numero"> -->
-            <!--  <button onclick="go()">Enviar</button> -->
-            <div class="dashboard">
-                <div class="vendas">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Vendas Hoje</h3>
-                            <h1>R$20.4K</h1>
-                            <h5>Você vendeu 123 itens</h5>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="50" cy="50" r="36"></circle>
-                                <circle id="circleProgress1" cx="50" cy="50" r="36"></circle>
-                            </svg>
-                            <div class="percentage1">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="visits">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Receita Hoje</h3>
-                            <h1>R$8.4K</h1>
-                            <h5>Receita gerada</h5>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="50" cy="50" r="36"></circle>
-                                <circle id="circleProgress2" cx="50" cy="50" r="36"></circle>
-                            </svg>
-                            <div class="percentage2">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="searches">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Em Estoque</h3>
-                            <h1>R$18.2K</h1>
-                            <h5>Pronto para venda</h5>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="50" cy="50" r="36"></circle>
-                                <circle id="circleProgress" cx="50" cy="50" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="estoque">
+                <h3>Estoque</h3>
+                <table id="tableestoque">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Avaliação</th>
+                            <th>Custo Un</th>
+                            <th>Quantidade Total</th>
+                            <th>Saida</th>
+                            <th>Margem de Lucro</th>
+                            <th>Custo Total</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
-            <!-- Final do Dashboard -->
-
-            <!-- Receitas Total Section -->
-            <div class="test">
-                <div class="receita-total">
-                    <div class="vendas">
-                        <div class="status">
-                            <div class="info">
-                                <h3>Receita Total</h3>
-                                <h1>R$50.4K</h1>
-                                <h5 id="porcento">-5</h5>
-                                <div class="seta">
-                                    <svg width="13px" height="13px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="seta" d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#FFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="venda-gasto">
-                                <div class="venda">
-                                    <svg>
-                                        <circle cx="4.5" cy="4.5" r="4.5" fill="#4CE13F"></circle>
-                                    </svg>
-                                    <h4>Venda</h4>
-                                </div>
-                                <div class="gasto">
-                                    <svg>
-                                        <circle cx="4.5" cy="4.5" r="4.5" fill="#E3000E"></circle>
-                                    </svg>
-                                    <h4>Gasto</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="area-chart"></div>
-                    </div>
-                    
-                </div>
-                <!-- Final das Receitas Totais -->
-    
-                <!-- Relatorios Section -->
-                <div class="relatorios">
-                    <h3>Ultimos Relatorios</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Periodo</th>
-                                <th>Margem</th>
-                                <th>Receita</th>
-                                <th>Lucro</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                    <a href="#">Mostrar Tudo</a>
-                </div>
-            </div>
-
         </main>
         
     </div>
+
+    <div id="margemset" class="margemset">
+        <div class="modal">
+            <button class="fechar" id="fechar">X</button>
+            <h1>Insira um valor para a Margem de Lucro (Entre 1 e 100)</h1>
+            <input id="setarmargem" class="modal-field" type="number" oninput="javascript: if (this.value > 100) this.value = 100; else if(this.value < 0) this.value = 0;" maxlength = "3" min="1" max="100">
+        </div>
+    </div>
+
+    <div id="compra" class="compra">
+        <div class="modal2">
+            <button class="fechar" id="fechar">X</button>
+            <h1>Insira a quantidade que deseja comprar</h1>
+            <input id="quantiacomprar" type="number" >
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
-    <script src="relatorios.js"></script>
-    <script src="index.js"></script>
+    <script src="lista_estoque.js"></script>
 </body>
 </html>

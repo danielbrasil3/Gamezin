@@ -19,7 +19,7 @@ function go()
     }
 }
 
-Orders.forEach(order => {
+Relatorios.forEach(order => {
     const tr = document.createElement('tr');
     const trContent = `
         <td>${order.periodo}</td>
@@ -30,6 +30,7 @@ Orders.forEach(order => {
     tr.innerHTML = trContent;
     document.querySelector('table tbody').appendChild(tr);
 });
+
 
 const areaChartOptions = {
     series: [
